@@ -10,7 +10,7 @@
 ## 📦 Tech Stack
 
 | Technology | Purpose |
-| :--- | :--- |
+|:---|:---|
 | **Node.js + Express 5** | Server framework |
 | **TypeScript** | Type safety, modern ES features |
 | **MongoDB + Mongoose 9** | NoSQL database, ODM with schema validation |
@@ -19,7 +19,7 @@
 | **Multer + Sharp** | Image upload and transformation |
 | **Ollama (LLaMA 3.2)** | AI chat and image analysis (local) |
 | **Helmet + CORS + Compression** | Security and performance |
-| **express‑validator** | Input validation |
+| **express-validator** | Input validation |
 | **Winston** | Logging |
 | **Vitest + Supertest** | Testing |
 
