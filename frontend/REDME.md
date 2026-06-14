@@ -5,7 +5,6 @@
 > Built with React 19, TypeScript, and Vite, it integrates an AI‑powered shopping assistant (Ollama), persistent cart, admin dashboard, and full checkout flow.
 
 ![Home Page Preview](https://via.placeholder.com/1200x630?text=MyStore+Home+Page)
-
 ![AI Chat Widget Preview](https://via.placeholder.com/1200x630?text=AI+Chat+Widget)
 
 ---
