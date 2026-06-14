@@ -1,31 +1,5 @@
 ```markdown
-# MyStore Backend – E‑commerce API with AI Assistant Integration
 
-> **A production‑ready RESTful API built with Node.js, Express, TypeScript, and MongoDB.**
-
-> Provides authentication, product management, order processing, AI‑powered chat (Ollama), image search, and admin analytics.
-
----
-
-## 📦 Tech Stack
-
-| Technology | Purpose |
-| :--- | :--- |
-| **Node.js + Express 5** | Server framework |
-| **TypeScript** | Type safety, modern ES features |
-| **MongoDB + Mongoose 9** | NoSQL database, ODM with schema validation |
-| **JWT** | Stateless authentication |
-| **bcryptjs** | Password hashing |
-| **Multer + Sharp** | Image upload and transformation |
-| **Ollama (LLaMA 3.2)** | AI chat and image analysis (local) |
-| **Helmet + CORS + Compression** | Security and performance |
-| **express‑validator** | Input validation |
-| **Winston** | Logging |
-| **Vitest + Supertest** | Testing |
-
----
-
-## 🏗️ Architecture Overview
 The backend follows a **layered architecture**:
 
 ```
