@@ -7,9 +7,6 @@
 
 ---
 
-<details>
-<summary><b>Click to expand – View Technology Stack</b></summary>
-
 ## 📦 Tech Stack
 
 | Technology | Purpose |
@@ -26,12 +23,9 @@
 | **Winston** | Logging |
 | **Vitest + Supertest** | Testing |
 
-</details>
-
 ---
 
 ## 🏗️ Architecture Overview
-
 The backend follows a **layered architecture**:
 
 ```
