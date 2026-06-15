@@ -1,8 +1,3 @@
-أرى المشكلة بوضوح من الصورة. GitHub يعرض الكود الخام (HTML tags) بدلاً من تفسيره لأنك تستخدم HTML داخل ملف `.md`. GitHub لا يدعم عرض HTML في ملفات Markdown للأمان.
-
-**الحل:** استخدم Markdown النقي، وإليك الملف المعدل بالكامل والجاهز للنسخ واللصق:
-
-```markdown
 # MyStore – Full‑Stack E‑commerce Platform with AI Shopping Assistant
 
 > **A production‑ready monorepo containing a React 19 frontend and Node.js/Express backend.**  
