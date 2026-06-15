@@ -1,50 +1,45 @@
-```markdown
-# MyStore Frontend – Production‑Grade E‑commerce Platform with AI Assistant
+<h1>MyStore Frontend – Production‑Grade E‑commerce Platform with AI Assistant</h1>
 
-> **A high‑performance, RTL‑first frontend engineered for scalability, type safety, and a seamless Arabic shopping experience.**  
-> Built with React 19, TypeScript, and Vite, it integrates an AI‑powered shopping assistant (Ollama), persistent cart, admin dashboard, and full checkout flow.
+<blockquote>
+  <p><strong>A high‑performance, RTL‑first frontend engineered for scalability, type safety, and a seamless Arabic shopping experience.</strong><br>
+  Built with React 19, TypeScript, and Vite, it integrates an AI‑powered shopping assistant (Ollama), persistent cart, admin dashboard, and full checkout flow.</p>
+</blockquote>
 
-![Home Page Preview](https://via.placeholder.com/1200x630?text=MyStore+Home+Page)
+<p><img src="https://via.placeholder.com/1200x630?text=MyStore+Home+Page" alt="Home Page Preview"></p>
 
-![AI Chat Widget Preview](https://via.placeholder.com/1200x630?text=AI+Chat+Widget)
+<p><img src="https://via.placeholder.com/1200x630?text=AI+Chat+Widget" alt="AI Chat Widget Preview"></p>
 
----
+<hr>
 
-## 🧠 Technology Stack – Rationale & Trade‑offs
+<h2>🧠 Technology Stack – Rationale & Trade‑offs</h2>
 
 <details>
 <summary><b>Click to expand: Detailed technology choices</b></summary>
 
-- **React 19** – UI library  
-  *Why*: Leverages concurrent rendering, automatic memoization, and improved hooks – reduces unnecessary re‑renders without manual optimisations.
-
-- **TypeScript** – Type safety  
-  *Why*: `strict` mode with `noUncheckedIndexedAccess` and `verbatimModuleSyntax` eliminates null/undefined bugs at compile time and enforces explicit imports.
-
-- **Vite** – Build tool  
-  *Why*: Native ESM, sub‑second HMR, and `manualChunks` for optimal code splitting – cuts dev cold start by 10x compared to CRA.
-
-- **Tailwind CSS** – Styling  
-  *Why*: Utility‑first with RTL‑aware utilities (`me`, `ms`, `ps`, `pe`) – perfect for Arabic‑first design without custom CSS overrides.
-
-- **Framer Motion** – Animations  
-  *Why*: Spring‑based physics, gesture support, and exit animations – delivers fluid micro‑interactions while maintaining 60 FPS.
-
-- **Axios** – HTTP client  
-  *Why*: Interceptors for automatic JWT injection, global 401 handling, and request/response logging – centralises all API communication.
-
-- **React Router v7** – Routing  
-  *Why*: Data‑aware routes, nested layouts, and lazy loading – clean separation between public, auth, and admin sections.
-
-- **Context API** – State management  
-  *Why*: Lightweight, built‑in solution for auth, cart, theme, and chat – avoids third‑party bloat while keeping state predictable.
-
-- **FontAwesome** – Icons  
-  *Why*: Extensive icon set, tree‑shakable imports, and consistent RTL support – no layout shifts due to icon fonts.
+<ul>
+  <li><strong>React 19</strong> – UI library<br>
+  <em>Why</em>: Leverages concurrent rendering, automatic memoization, and improved hooks – reduces unnecessary re‑renders without manual optimisations.</li>
+  <li><strong>TypeScript</strong> – Type safety<br>
+  <em>Why</em>: <code>strict</code> mode with <code>noUncheckedIndexedAccess</code> and <code>verbatimModuleSyntax</code> eliminates null/undefined bugs at compile time and enforces explicit imports.</li>
+  <li><strong>Vite</strong> – Build tool<br>
+  <em>Why</em>: Native ESM, sub‑second HMR, and <code>manualChunks</code> for optimal code splitting – cuts dev cold start by 10x compared to CRA.</li>
+  <li><strong>Tailwind CSS</strong> – Styling<br>
+  <em>Why</em>: Utility‑first with RTL‑aware utilities (<code>me</code>, <code>ms</code>, <code>ps</code>, <code>pe</code>) – perfect for Arabic‑first design without custom CSS overrides.</li>
+  <li><strong>Framer Motion</strong> – Animations<br>
+  <em>Why</em>: Spring‑based physics, gesture support, and exit animations – delivers fluid micro‑interactions while maintaining 60 FPS.</li>
+  <li><strong>Axios</strong> – HTTP client<br>
+  <em>Why</em>: Interceptors for automatic JWT injection, global 401 handling, and request/response logging – centralises all API communication.</li>
+  <li><strong>React Router v7</strong> – Routing<br>
+  <em>Why</em>: Data‑aware routes, nested layouts, and lazy loading – clean separation between public, auth, and admin sections.</li>
+  <li><strong>Context API</strong> – State management<br>
+  <em>Why</em>: Lightweight, built‑in solution for auth, cart, theme, and chat – avoids third‑party bloat while keeping state predictable.</li>
+  <li><strong>FontAwesome</strong> – Icons<br>
+  <em>Why</em>: Extensive icon set, tree‑shakable imports, and consistent RTL support – no layout shifts due to icon fonts.</li>
+</ul>
 
 </details>
 
----
+<hr>
 
 ## 🏗️ Modular Architecture – Clean Separation of Concerns
 
