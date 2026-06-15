@@ -1,24 +1,22 @@
-```html
-<h1>MyStore – Full‑Stack E‑commerce Platform with AI Shopping Assistant</h1>
+أرى المشكلة بوضوح من الصورة. GitHub يعرض الكود الخام (HTML tags) بدلاً من تفسيره لأنك تستخدم HTML داخل ملف `.md`. GitHub لا يدعم عرض HTML في ملفات Markdown للأمان.
 
-<blockquote>
-  <p><strong>A production‑ready monorepo containing a React 19 frontend and Node.js/Express backend.</strong><br>
-  Features AI‑powered chat (Ollama), visual search, persistent cart, admin dashboard, and secure JWT authentication.</p>
-</blockquote>
+**الحل:** استخدم Markdown النقي، وإليك الملف المعدل بالكامل والجاهز للنسخ واللصق:
 
-<p align="center">
-  <img src="https://via.placeholder.com/1200x630?text=MyStore+Home+Page" alt="Frontend Preview" width="90%">
-</p>
+```markdown
+# MyStore – Full‑Stack E‑commerce Platform with AI Shopping Assistant
 
-<p align="center">
-  <img src="https://via.placeholder.com/1200x630?text=API+Documentation" alt="Backend API" width="90%">
-</p>
+> **A production‑ready monorepo containing a React 19 frontend and Node.js/Express backend.**  
+> Features AI‑powered chat (Ollama), visual search, persistent cart, admin dashboard, and secure JWT authentication.
 
-<hr>
+![Frontend Preview](https://via.placeholder.com/1200x630?text=MyStore+Home+Page)
 
-<h2>📦 Technology Stack</h2>
+![Backend API](https://via.placeholder.com/1200x630?text=API+Documentation)
 
-<h3>Frontend</h3>
+---
+
+## 📦 Technology Stack
+
+### Frontend
 
 | Technology | Purpose |
 |:---|:---|
@@ -31,7 +29,7 @@
 | React Router v7 | Lazy loaded routes |
 | Context API | State management (auth, cart, theme, chat) |
 
-<h3>Backend</h3>
+### Backend
 
 | Technology | Purpose |
 |:---|:---|
@@ -45,11 +43,12 @@
 | Winston | Logging |
 | Vitest + Supertest | Unit & integration tests |
 
-<hr>
+---
 
-<h2>🏗️ Architecture Overview</h2>
+## 🏗️ Architecture Overview
 
-<pre><code>┌─────────────────────────────────────────────────────────────┐
+```
+┌─────────────────────────────────────────────────────────────┐
 │                    Client (React SPA)                       │
 │  - Lazy loaded routes                                       │
 │  - Context providers (Auth, Cart, Chat, Theme)              │
@@ -76,21 +75,20 @@
 ┌─────────────────────────────────────────────────────────────┐
 │                    Ollama (Local AI)                        │
 │  - Intent classification, product extraction, image analysis│
-└─────────────────────────────────────────────────────────────┘</code></pre>
+└─────────────────────────────────────────────────────────────┘
+```
 
-<h3>Key Design Decisions</h3>
+### Key Design Decisions
 
-<ul>
-  <li><strong>Atomic commits</strong> – Every logical change is a separate commit (see roadmap below).</li>
-  <li><strong>Separation of concerns</strong> – Frontend uses service layer for API calls; backend uses service/repository pattern.</li>
-  <li><strong>RTL‑first frontend</strong> – Tailwind utilities (<code>me</code>, <code>ms</code>, <code>ps</code>, <code>pe</code>) ensure proper mirroring.</li>
-  <li><strong>Inventory management</strong> – Orders reserve stock using MongoDB transactions.</li>
-  <li><strong>Graceful AI fallback</strong> – When Ollama is unavailable, backend returns friendly error messages.</li>
-</ul>
+- **Atomic commits** – Every logical change is a separate commit (see roadmap below).
+- **Separation of concerns** – Frontend uses service layer for API calls; backend uses service/repository pattern.
+- **RTL‑first frontend** – Tailwind utilities (`me`, `ms`, `ps`, `pe`) ensure proper mirroring.
+- **Inventory management** – Orders reserve stock using MongoDB transactions.
+- **Graceful AI fallback** – When Ollama is unavailable, backend returns friendly error messages.
 
-<hr>
+---
 
-<h2>✨ Key Features</h2>
+## ✨ Key Features
 
 | Feature | Implementation |
 |:---|:---|
@@ -104,84 +102,99 @@
 | 🔎 Visual Search | Upload image → Ollama extracts keywords → product results |
 | ⚡ Performance | Memoisation, lazy loading, code splitting, debouncing |
 
-<hr>
+---
 
-<h2>🚀 Getting Started</h2>
+## 🚀 Getting Started
 
-<h3>Prerequisites</h3>
+### Prerequisites
 
-<ul>
-  <li>Node.js <strong>20+</strong> (v22 recommended)</li>
-  <li>npm or pnpm</li>
-  <li>MongoDB (local or Atlas URI)</li>
-  <li>Ollama installed and running (pull <code>llama3.2:3b</code>)</li>
-</ul>
+- Node.js **20+** (v22 recommended)
+- npm or pnpm
+- MongoDB (local or Atlas URI)
+- Ollama installed and running (pull `llama3.2:3b`)
 
-<h3>Installation</h3>
+### Installation
 
-<ol>
-  <li>
-    <p><strong>Clone the repository</strong></p>
-    <pre><code>git clone https://github.com/your-org/mystore.git
-cd mystore</code></pre>
-  </li>
-  <li>
-    <p><strong>Install backend dependencies</strong></p>
-    <pre><code>cd backend
-npm install</code></pre>
-  </li>
-  <li>
-    <p><strong>Set up backend environment</strong></p>
-    <pre><code>cp .env.example .env
-# Edit .env with your MONGO_URI, JWT_SECRET, etc.</code></pre>
-  </li>
-  <li>
-    <p><strong>Seed database (optional)</strong></p>
-    <pre><code>npm run seed
-# Creates admin@mystore.com / admin123 and sample products</code></pre>
-  </li>
-  <li>
-    <p><strong>Start backend server</strong></p>
-    <pre><code>npm run dev      # Runs on http://localhost:5000</code></pre>
-  </li>
-  <li>
-    <p><strong>Install frontend dependencies (new terminal)</strong></p>
-    <pre><code>cd ../frontend
-npm install</code></pre>
-  </li>
-  <li>
-    <p><strong>Set up frontend environment</strong></p>
-    <pre><code>cp .env.example .env
-# Set VITE_API_URL=http://localhost:5000/api</code></pre>
-  </li>
-  <li>
-    <p><strong>Start frontend dev server</strong></p>
-    <pre><code>npm run dev      # Runs on http://localhost:5173</code></pre>
-  </li>
-  <li>
-    <p><strong>Open</strong> <code>http://localhost:5173</code> and start shopping.</p>
-  </li>
-</ol>
+1. **Clone the repository**
 
-<hr>
+   ```bash
+   git clone https://github.com/your-org/mystore.git
+   cd mystore
+   ```
 
-<h2>🧪 Testing</h2>
+2. **Install backend dependencies**
 
-<h3>Backend</h3>
+   ```bash
+   cd backend
+   npm install
+   ```
 
-<pre><code>cd backend
-npm test          # Vitest + Supertest (in‑memory MongoDB)</code></pre>
+3. **Set up backend environment**
 
-<h3>Frontend</h3>
+   ```bash
+   cp .env.example .env
+   # Edit .env with your MONGO_URI, JWT_SECRET, etc.
+   ```
 
-<pre><code>cd frontend
-npm test          # Vitest + React Testing Library</code></pre>
+4. **Seed database (optional)**
 
-<hr>
+   ```bash
+   npm run seed
+   # Creates admin@mystore.com / admin123 and sample products
+   ```
 
-<h2>📁 Project Structure</h2>
+5. **Start backend server**
 
-<pre><code>mystore/
+   ```bash
+   npm run dev      # Runs on http://localhost:5000
+   ```
+
+6. **Install frontend dependencies (new terminal)**
+
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+
+7. **Set up frontend environment**
+
+   ```bash
+   cp .env.example .env
+   # Set VITE_API_URL=http://localhost:5000/api
+   ```
+
+8. **Start frontend dev server**
+
+   ```bash
+   npm run dev      # Runs on http://localhost:5173
+   ```
+
+9. **Open** `http://localhost:5173` and start shopping.
+
+---
+
+## 🧪 Testing
+
+### Backend
+
+```bash
+cd backend
+npm test          # Vitest + Supertest (in‑memory MongoDB)
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm test          # Vitest + React Testing Library
+```
+
+---
+
+## 📁 Project Structure
+
+```
+mystore/
 ├── frontend/                 # React 19 + Vite
 │   ├── src/
 │   │   ├── components/       # Reusable UI (ProductCard, ChatWidget)
@@ -204,94 +217,101 @@ npm test          # Vitest + React Testing Library</code></pre>
 │   │   ├── utils/            # Logger, imageHelper, validators
 │   │   └── scripts/          # Seed products
 │   └── package.json
-└── README.md                 # You are here</code></pre>
+└── README.md                 # You are here
+```
 
-<hr>
+---
 
-<h2>🗺️ Git Commit Roadmap – Atomic Development History</h2>
+## 🗺️ Git Commit Roadmap – Atomic Development History
 
-<p>Below is a <strong>step‑by‑step plan</strong> of 15+ atomic commits you will make when pushing the project to GitHub.<br>
-Each commit follows the <a href="https://www.conventionalcommits.org/">Conventional Commits</a> standard.<br>
-<strong>Why this matters:</strong> Recruiters see a clean, incremental history – evidence of real hands‑on work.</p>
+Below is a **step‑by‑step plan** of 15+ atomic commits you will make when pushing the project to GitHub.  
+Each commit follows the [Conventional Commits](https://www.conventionalcommits.org/) standard.  
+**Why this matters:** Recruiters see a clean, incremental history – evidence of real hands‑on work.
 
-<h3>Phase 1: Project Initialization (Commits 1–4)</h3>
+### Phase 1: Project Initialization (Commits 1–4)
 
-<pre><code>1.  chore: initialize monorepo with frontend and backend folders
+```
+1.  chore: initialize monorepo with frontend and backend folders
 2.  feat(backend): setup Express server with TypeScript and basic health check
 3.  feat(frontend): scaffold React 19 + Vite + Tailwind CSS
-4.  docs: add project roadmap and commit guidelines to README</code></pre>
+4.  docs: add project roadmap and commit guidelines to README
+```
 
-<h3>Phase 2: Backend Core (Commits 5–9)</h3>
+### Phase 2: Backend Core (Commits 5–9)
 
-<pre><code>5.  feat(backend): connect to MongoDB with Mongoose and create User model
+```
+5.  feat(backend): connect to MongoDB with Mongoose and create User model
 6.  feat(backend): implement JWT token service and auth middleware
 7.  feat(backend): add auth service (register, login, profile, password reset)
 8.  feat(backend): build Product model with inventory, images, ratings
-9.  feat(backend): implement product CRUD with filtering, pagination, text search</code></pre>
+9.  feat(backend): implement product CRUD with filtering, pagination, text search
+```
 
-<h3>Phase 3: AI & Chat Features (Commits 10–12)</h3>
+### Phase 3: AI & Chat Features (Commits 10–12)
 
-<pre><code>10. feat(backend): integrate Ollama for image analysis and intent classification
+```
+10. feat(backend): integrate Ollama for image analysis and intent classification
 11. feat(backend): create Chat model with TTL index and session management
-12. feat(backend): implement chat service with AI fallback and product search</code></pre>
+12. feat(backend): implement chat service with AI fallback and product search
+```
 
-<h3>Phase 4: Order & Payment (Commits 13–15)</h3>
+### Phase 4: Order & Payment (Commits 13–15)
 
-<pre><code>13. feat(backend): create Order model with status workflow and virtuals
+```
+13. feat(backend): create Order model with status workflow and virtuals
 14. feat(backend): implement order service (transactional stock reservation)
-15. feat(backend): add checkout routes and payment webhook placeholder</code></pre>
+15. feat(backend): add checkout routes and payment webhook placeholder
+```
 
-<h3>Phase 5: Frontend Pages & State (Commits 16–19)</h3>
+### Phase 5: Frontend Pages & State (Commits 16–19)
 
-<pre><code>16. feat(frontend): implement AuthContext and login/register pages
+```
+16. feat(frontend): implement AuthContext and login/register pages
 17. feat(frontend): build ProductCard component and Store page with useProducts hook
 18. feat(frontend): implement CartContext with localStorage persistence
-19. feat(frontend): create AI ChatWidget with memoised input and message bubbles</code></pre>
+19. feat(frontend): create AI ChatWidget with memoised input and message bubbles
+```
 
-<h3>Phase 6: Polish & Deployment (Commits 20–22)</h3>
+### Phase 6: Polish & Deployment (Commits 20–22)
 
-<pre><code>20. feat(frontend): add dark mode toggle and AdminLayout dashboard
+```
+20. feat(frontend): add dark mode toggle and AdminLayout dashboard
 21. test(backend): write integration tests for auth and product endpoints
-22. ci: add GitHub Actions workflow for linting and testing</code></pre>
+22. ci: add GitHub Actions workflow for linting and testing
+```
 
-<blockquote>
-  <p><strong>How to use this roadmap:</strong><br>
-  After writing code for each step, commit using the exact message shown.<br>
-  This produces a rich, verifiable commit history that stands out to technical recruiters.</p>
-</blockquote>
+> **How to use this roadmap:**  
+> After writing code for each step, commit using the exact message shown.  
+> This produces a rich, verifiable commit history that stands out to technical recruiters.
 
-<hr>
+---
 
-<h2>🚢 Deployment</h2>
+## 🚢 Deployment
 
-<ul>
-  <li><strong>Frontend</strong> – Build with <code>npm run build</code> and deploy to Vercel, Netlify, or any static host.</li>
-  <li><strong>Backend</strong> – Set environment variables on Render, Railway, or AWS Elastic Beanstalk.</li>
-  <li><strong>MongoDB</strong> – Use MongoDB Atlas (free tier).</li>
-  <li><strong>Ollama</strong> – For production, consider a dedicated GPU instance or disable AI features.</li>
-</ul>
+- **Frontend** – Build with `npm run build` and deploy to Vercel, Netlify, or any static host.
+- **Backend** – Set environment variables on Render, Railway, or AWS Elastic Beanstalk.
+- **MongoDB** – Use MongoDB Atlas (free tier).
+- **Ollama** – For production, consider a dedicated GPU instance or disable AI features.
 
-<hr>
+---
 
-<h2>📄 License</h2>
+## 📄 License
 
-<p>Proprietary – © 2026 MyStore. All rights reserved.</p>
+Proprietary – © 2026 MyStore. All rights reserved.
 
-<hr>
+---
 
-<h2>🤝 Acknowledgments</h2>
+## 🤝 Acknowledgments
 
-<ul>
-  <li><a href="https://reactjs.org/">React</a></li>
-  <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
-  <li><a href="https://vitejs.dev/">Vite</a></li>
-  <li><a href="https://expressjs.com/">Express</a></li>
-  <li><a href="https://mongoosejs.com/">Mongoose</a></li>
-  <li><a href="https://ollama.com/">Ollama</a></li>
-</ul>
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [Express](https://expressjs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Ollama](https://ollama.com/)
 
-<hr>
+---
 
-<p><strong>Built with precision, scalability, and a clean commit history.</strong><br>
-<em>Ready for code review and production deployment.</em></p>
+**Built with precision, scalability, and a clean commit history.**  
+_Ready for code review and production deployment._
 ```
