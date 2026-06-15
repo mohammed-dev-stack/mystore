@@ -1,27 +1,67 @@
-```markdown
 # MyStore Backend – E‑commerce API with AI Assistant Integration
 
-> **A production‑ready RESTful API built with Node.js, Express, TypeScript, and MongoDB.**
-
+> **A production‑ready RESTful API built with Node.js, Express, TypeScript, and MongoDB.**  
 > Provides authentication, product management, order processing, AI‑powered chat (Ollama), image search, and admin analytics.
 
 ## 📦 Tech Stack
 
-| Technology | Purpose |
-|:---|:---|
-| **Node.js + Express 5** | Server framework |
-| **TypeScript** | Type safety, modern ES features |
-| **MongoDB + Mongoose 9** | NoSQL database, ODM with schema validation |
-| **JWT** | Stateless authentication |
-| **bcryptjs** | Password hashing |
-| **Multer + Sharp** | Image upload and transformation |
-| **Ollama (LLaMA 3.2)** | AI chat and image analysis (local) |
-| **Helmet + CORS + Compression** | Security and performance |
-| **express-validator** | Input validation |
-| **Winston** | Logging |
-| **Vitest + Supertest** | Testing |
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Node.js + Express 5</strong></td>
+<td>Server framework</td>
+</tr>
+<tr>
+<td><strong>TypeScript</strong></td>
+<td>Type safety, modern ES features</td>
+</tr>
+<tr>
+<td><strong>MongoDB + Mongoose 9</strong></td>
+<td>NoSQL database, ODM with schema validation</td>
+</tr>
+<tr>
+<td><strong>JWT</strong></td>
+<td>Stateless authentication</td>
+</tr>
+<tr>
+<td><strong>bcryptjs</strong></td>
+<td>Password hashing</td>
+</tr>
+<tr>
+<td><strong>Multer + Sharp</strong></td>
+<td>Image upload and transformation</td>
+</tr>
+<tr>
+<td><strong>Ollama (LLaMA 3.2)</strong></td>
+<td>AI chat and image analysis (local)</td>
+</tr>
+<tr>
+<td><strong>Helmet + CORS + Compression</strong></td>
+<td>Security and performance</td>
+</tr>
+<tr>
+<td><strong>express-validator</strong></td>
+<td>Input validation</td>
+</tr>
+<tr>
+<td><strong>Winston</strong></td>
+<td>Logging</td>
+</tr>
+<tr>
+<td><strong>Vitest + Supertest</strong></td>
+<td>Testing</td>
+</tr>
+</tbody>
+</table>
 
 ## 🏗️ Architecture Overview
+
 The backend follows a **layered architecture**:
 
 ```
