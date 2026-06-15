@@ -5,7 +5,6 @@
 
 > Provides authentication, product management, order processing, AI‑powered chat (Ollama), image search, and admin analytics.
 
----
 ## 📦 Tech Stack
 
 | Technology | Purpose |
@@ -21,7 +20,6 @@
 | **express-validator** | Input validation |
 | **Winston** | Logging |
 | **Vitest + Supertest** | Testing |
----
 
 ## 🏗️ Architecture Overview
 The backend follows a **layered architecture**:
